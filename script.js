@@ -3,7 +3,7 @@
 // ==========================
 
 const SPREADSHEET_API_URL =
-"https://script.google.com/macros/s/AKfycbz8r2z2cppA8ITYk-t2oL-Iet6J34DPXGEdGMa0NJH8fGc2dve8RTltC8CG4Cr1Ad9uEQ/exec";
+"https://script.google.com/macros/s/AKfycbx9lqOllkIGhF81KxHJ0UdOqGngObi1K3P3H3gmi-DfM281VcJc5l2kd7EO_e8RzsNfSg/exec";
 
 const TANGGAL_JADIAN = "2025-07-20";
 
