@@ -89,12 +89,27 @@ function prosesLogin() {
 
 function bukaAmplop() {
 
-    document.getElementById("welcome-screen")
-        .style.display = "none";
+    document.getElementById('welcome-screen').style.display = 'none';
 
+    // tampilkan section utama
+    document.getElementById('home').style.display = 'flex';
+
+    document.getElementById('timeline').style.display = 'block';
+
+    document.getElementById('anniversary').style.display = 'flex';
+
+    // tombol
+    document.getElementById('admin-btn').style.display = 'flex';
+
+    document.getElementById('music-btn').style.display = 'flex';
+
+    // play music
     if (backsound) {
-        backsound.play().catch(() => {});
+        backsound.play().catch(() => {
+            console.log("Autoplay diblok browser");
+        });
     }
+
 }
 
 
