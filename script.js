@@ -119,50 +119,153 @@ function bukaAmplop() {
 
 function hitungDurasiJadian() {
 
-    const mulai = new Date(TANGGAL_JADIAN);
-    const sekarang = new Date();
+   ...
 
-    let bulan =
-        (sekarang.getFullYear() - mulai.getFullYear()) * 12;
+   let teks = "";
 
-    bulan += sekarang.getMonth() - mulai.getMonth();
+   if (bulan === 1 && hari === 0) {
 
-    if (sekarang.getDate() < mulai.getDate()) {
-        bulan--;
-    }
+    teks = "1 bulan sama kamu ternyata bikin candu juga 💖";
 
-    const target = new Date(
-        mulai.getFullYear(),
-        mulai.getMonth() + bulan,
-        mulai.getDate()
-    );
+} else if (bulan === 2 && hari === 0) {
 
-    const selisih =
-        sekarang - target;
+    teks = "2 bulan bertahan sama kelakuan kita masing-masing. Prestasi 🗿";
 
-    const hari = Math.floor(
-        selisih / (1000 * 60 * 60 * 24)
-    );
+} else if (bulan === 3 && hari === 0) {
 
-    let teks = "";
+    teks = "3 bulan penuh drama, ketawa, dan rasa sayang ❤️";
 
-    if (bulan >= 12) {
+} else if (bulan === 4 && hari === 0) {
 
-        const tahun = Math.floor(bulan / 12);
-        const sisa = bulan % 12;
+    teks = "4 bulan dan aku masih milih kamu tiap hari 💕";
 
-        teks =
-        `Udah ${tahun} Tahun ${sisa} Bulan ${hari} Hari bareng 💖`;
+} else if (bulan === 5 && hari === 0) {
 
-    } else {
+    teks = "5 bulan bareng manusia favoritku 🥹";
 
-        teks =
-        `Kita udah ${bulan} Bulan ${hari} Hari bareng 💖`;
-    }
+} else if (bulan === 6 && hari === 0) {
 
-    document.getElementById(
-        "automatic-milestone-text"
-    ).innerHTML = teks;
+    teks = "Happy 6 Month Sayang 💖";
+
+} else if (bulan === 7 && hari === 0) {
+
+    teks = "7 bulan dan masih belum bosen liat muka kamu 😌";
+
+} else if (bulan === 8 && hari === 0) {
+
+    teks = "8 bulan. Hubungan kita udah kayak subscription premium, lanjut terus.";
+
+} else if (bulan === 9 && hari === 0) {
+
+    teks = "9 bulan bersama. Lucu juga ya kita bisa sejauh ini ❤️";
+
+} else if (bulan === 10 && hari === 0) {
+
+    teks = "10 bulan penuh cerita random tapi berharga 💫";
+
+} else if (bulan === 11 && hari === 0) {
+
+    teks = "11 bulan dan bentar lagi officially setahun 🥹";
+
+} else if (bulan === 12 && hari === 0) {
+
+    teks = "🎉 HAPPY 1 YEAR ANNIVERSARY SAYANG ❤️";
+
+} else if (bulan === 18 && hari === 0) {
+
+    teks = "1 Tahun 6 Bulan sama manusia paling nyebelin tapi paling aku sayang 🥹";
+
+} else if (bulan === 24 && hari === 0) {
+
+    teks = "🎉 HAPPY 2 YEARS ❤️ Masih kuat juga kita ya.";
+
+} else if (bulan === 36 && hari === 0) {
+
+    teks = "3 tahun bareng. Kita udah kayak paket bundle kehidupan 😭";
+
+} else if (bulan === 48 && hari === 0) {
+
+    teks = "4 tahun dan aku masih pengen cerita semuanya ke kamu 💕";
+
+} else if (bulan === 60 && hari === 0) {
+
+    teks = "5 tahun?! Gila. Hubungan kita lebih awet dari baterai Android.";
+
+} else if (bulan === 72 && hari === 0) {
+
+    teks = "6 tahun bersama dan aku masih milih kamu tiap hari ❤️";
+
+} else if (bulan === 84 && hari === 0) {
+
+    teks = "7 tahun. Kita udah veteran hubungan jir 🗿";
+
+} else if (bulan === 96 && hari === 0) {
+
+    teks = "8 tahun dan masih jadi rumah satu sama lain 🥹";
+
+} else if (bulan === 108 && hari === 0) {
+
+    teks = "9 tahun bersama. Banyak badai lewat, kita masih di sini.";
+
+} else if (bulan === 120 && hari === 0) {
+
+    teks = "🎉 10 TAHUN ❤️ Ini hubungan atau franchise film panjang jir.";
+
+} else if (bulan === 180 && hari === 0) {
+
+    teks = "15 tahun bersama. Kita udah ngalamin setengah kehidupan bareng.";
+
+} else if (bulan === 240 && hari === 0) {
+
+    teks = "🎉 20 TAHUN ❤️ Bahkan waktu aja kalah konsisten sama kita.";
+
+} else if (bulan === 300 && hari === 0) {
+
+    teks = "25 tahun bersama. Udah level relationship boss final.";
+
+} else if (bulan === 360 && hari === 0) {
+
+    teks = "🎉 30 TAHUN ❤️ Masih gandengan juga ternyata.";
+
+} else if (bulan === 480 && hari === 0) {
+
+    teks = "40 tahun bersama. Kita udah jadi legenda hidup 😭";
+
+} else if (bulan === 600 && hari === 0) {
+
+    teks = "50 tahun bareng. Setengah abad jir... keren banget.";
+
+} else if (bulan === 720 && hari === 0) {
+
+    teks = "🎉 60 TAHUN ❤️ Cinta kita udah kayak artefak sejarah.";
+
+} else if (bulan === 840 && hari === 0) {
+
+    teks = "70 tahun bersama. Bahkan AI aja terharu dikit.";
+
+} else if (bulan === 960 && hari === 0) {
+
+    teks = "🎉 80 TAHUN ❤️ Kalau ini kejadian, fix cinta sejati beneran.";
+
+} else if (bulan >= 12) {
+
+    const tahun = Math.floor(bulan / 12);
+    const sisa = bulan % 12;
+
+    let bagianBulan =
+        sisa > 0 ? `${sisa} Bulan ` : "";
+
+    teks =
+    `Udah ${tahun} Tahun ${bagianBulan}${hari} Hari bareng 💖`;
+
+} else {
+
+    teks =
+    `Kita udah ${bulan} Bulan ${hari} Hari bareng 💖`;
+}
+   document.getElementById(
+      "automatic-milestone-text"
+   ).innerHTML = teks;
 }
 
 
