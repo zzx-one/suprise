@@ -3,7 +3,7 @@
 // ==========================
 
 const SPREADSHEET_API_URL =
-"https://script.google.com/macros/s/AKfycbx9lqOllkIGhF81KxHJ0UdOqGngObi1K3P3H3gmi-DfM281VcJc5l2kd7EO_e8RzsNfSg/exec";
+"https://script.google.com/macros/s/AKfycbxIVWtygNmkKEEcXISrrW4noUC5QTaDID3C2j5KqlPtWOSyTWEzSq83uGf_OCrW7T3hxw/exec";
 
 const TANGGAL_JADIAN = "2025-07-20";
 
@@ -427,23 +427,22 @@ function kirimKeSheets() {
             tanggal,
             judul,
             cerita,
-            foto
-        }),
-        headers: {
-            "Content-Type": "application/json"
-        }
+            foto,
+            caption: ""
+        })
     })
     .then(res => res.text())
-    .then(data => {
-        alert("Kenangan berhasil disimpan ❤️");
+    .then(res => {
+        console.log("OK:", res);
+        alert("Berhasil masuk ke Sheets ❤️");
         toggleAdminPanel();
+        muatKenanganDariSheets();
     })
     .catch(err => {
-        console.error(err);
-        alert("Gagal kirim ke Sheets, check API lu");
+        console.error("ERROR:", err);
+        alert("Gagal kirim ke Sheets");
     });
 }
-
 
 // ==========================
 // EFEK HATI
