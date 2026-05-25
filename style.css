@@ -506,3 +506,9 @@ body {
         opacity: 1;
     }
 }
+.caption {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
