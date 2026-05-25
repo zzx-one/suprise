@@ -3,7 +3,7 @@
 // ==========================
 
 const SPREADSHEET_API_URL =
-"https://script.google.com/macros/s/AKfycbxIVWtygNmkKEEcXISrrW4noUC5QTaDID3C2j5KqlPtWOSyTWEzSq83uGf_OCrW7T3hxw/exec";
+"https://script.google.com/macros/s/AKfycbxBuhYiZJtTXY82KiTNIKCk7yQ2JqYIfEzP2PRw1GJ3jUkUanm2glQfiy4H6DFviDtRSA/exec";
 
 const TANGGAL_JADIAN = "2025-07-20";
 
@@ -415,32 +415,37 @@ function kirimKeSheets() {
     const judul = document.getElementById("inputJudul").value;
     const cerita = document.getElementById("inputCerita").value;
     const foto = document.getElementById("inputFoto").value;
+    const caption = document.getElementById("inputCaption").value;
 
     if (!tanggal || !judul || !cerita) {
-        alert("Isi dulu semua datanya 🗿");
+        showCustomAlert("Isi dulu semua datanya 🗿");
         return;
     }
 
-    fetch(SPREADSHEET_API_URL, {
-        method: "POST",
-        body: JSON.stringify({
-            tanggal,
-            judul,
-            cerita,
-            foto,
-            caption: ""
-        })
+   fetch(SPREADSHEET_API_URL + "?key=love-project-2025-secret", {
+    method: "POST",
+    body: JSON.stringify({
+        tanggal,
+        judul,
+        cerita,
+        foto,
+        caption
     })
+})
     .then(res => res.text())
     .then(res => {
         console.log("OK:", res);
-        alert("Berhasil masuk ke Sheets ❤️");
+        showCustomAlert(
+    "Yeay! Kenangan berhasil ditambahkan ke timeline 💖"
+);
         toggleAdminPanel();
         muatKenanganDariSheets();
     })
     .catch(err => {
         console.error("ERROR:", err);
-        alert("Gagal kirim ke Sheets");
+        showCustomAlert(
+    "Gagal ke kirim server nya ngambek kek kamu 😢 Coba lagi ya!"
+);
     });
 }
 
