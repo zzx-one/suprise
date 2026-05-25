@@ -411,35 +411,37 @@ function toggleAdminPanel() {
 
 function kirimKeSheets() {
 
-    const tanggal =
-        document.getElementById("inputTanggal").value;
-
-    const judul =
-        document.getElementById("inputJudul").value;
-
-    const cerita =
-        document.getElementById("inputCerita").value;
-
-    const foto =
-        document.getElementById("inputFoto").value;
+    const tanggal = document.getElementById("inputTanggal").value;
+    const judul = document.getElementById("inputJudul").value;
+    const cerita = document.getElementById("inputCerita").value;
+    const foto = document.getElementById("inputFoto").value;
 
     if (!tanggal || !judul || !cerita) {
-
         alert("Isi dulu semua datanya 🗿");
-
         return;
     }
 
-    console.log({
-        tanggal,
-        judul,
-        cerita,
-        foto
+    fetch(SPREADSHEET_API_URL, {
+        method: "POST",
+        body: JSON.stringify({
+            tanggal,
+            judul,
+            cerita,
+            foto
+        }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(res => res.text())
+    .then(data => {
+        alert("Kenangan berhasil disimpan ❤️");
+        toggleAdminPanel();
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Gagal kirim ke Sheets, check API lu");
     });
-
-    alert("Kenangan berhasil disimpan ❤️");
-
-    toggleAdminPanel();
 }
 
 
