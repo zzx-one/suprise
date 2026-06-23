@@ -5,7 +5,7 @@
 const SPREADSHEET_API_URL =
 "https://script.google.com/macros/s/AKfycbxBuhYiZJtTXY82KiTNIKCk7yQ2JqYIfEzP2PRw1GJ3jUkUanm2glQfiy4H6DFviDtRSA/exec";
 
-const TANGGAL_JADIAN = "2025-07-20";
+const TANGGAL_JADIAN = "2025-07-21";
 
 const AUTH_USER_HASH =
 "fea0c432ca8d650c26174e2d7cd951960e5e73121409d3b284ae00dd18051dc9";
